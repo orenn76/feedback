@@ -1,0 +1,9 @@
+server:
+  port: 8090
+
+logging:
+  file: microservices.log
+  level:
+    org.springframework.web: INFO
+
+postServiceClientUrl: http://localhost:8080/post-service
