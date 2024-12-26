@@ -1,0 +1,23 @@
+{
+  "index": {
+    "number_of_shards": 2,
+    "number_of_replicas": 1,
+    "max_ngram_diff": 50
+  },
+  "analysis": {
+    "filter": {
+      "ngram_filter": {
+        "type": "ngram",
+        "min_gram": 1,
+        "max_gram": 50
+      }
+    },
+    "analyzer": {
+      "ngram_analyzer": {
+        "type": "custom",
+        "tokenizer": "standard",
+        "filter": ["lowercase", "ngram_filter"]
+      }
+    }
+  }
+}

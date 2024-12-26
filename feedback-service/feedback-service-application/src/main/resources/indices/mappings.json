@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "title": {
+      "type": "text",
+      "analyzer": "ngram_analyzer"
+    }
+  }
+}

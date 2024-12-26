@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.1</version>
+        <relativePath /> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.ninyo</groupId>
+    <artifactId>feedback</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>feedback</name>
+    <description>Feedback</description>
+
+    <properties>
+        <java.version>22</java.version>
+        <spring-data-opensearch.version>1.6.0</spring-data-opensearch.version>
+        <opensearch-java.version>2.19.0</opensearch-java.version>
+    </properties>
+
+    <modules>
+        <module>feedback-service</module>
+        <module>data-injector</module>
+        <module>common</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.opensearch.client</groupId>
+                <artifactId>spring-data-opensearch</artifactId>
+                <version>${spring-data-opensearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.opensearch.client</groupId>
+                <artifactId>spring-data-opensearch-starter</artifactId>
+                <version>${spring-data-opensearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.opensearch.client</groupId>
+                <artifactId>opensearch-java</artifactId>
+                <version>${opensearch-java.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
