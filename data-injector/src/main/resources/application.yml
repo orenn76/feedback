@@ -1,0 +1,9 @@
+server:
+  port: 8090
+
+logging:
+  file: microservices.log
+  level:
+    org.springframework.web: INFO
+
+feedbackServiceClientUrl: http://localhost:8000/feedback-service
